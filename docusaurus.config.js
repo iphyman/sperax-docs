@@ -30,6 +30,7 @@
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
           customCss2: require.resolve("./src/css/colors.css"),
+          themeCss: require.resolve("./src/pages/index.module.css"),
         },
       }),
     ],
