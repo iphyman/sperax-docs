@@ -4,21 +4,10 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import SearchBar from '@theme-original/SearchBar';
 import DiscordLogo from '@site/static/img/discord.svg';
-import {
-  Container,
-  Row,
-  CenterCard,
-  ShadowCard,
-  IconWrapper,
-  TopSection,
-  DocsHeader,
-  DocsHeaderContent,
-  StyledGithubIcon,
-  SmOnly
-} from '../components/template'
 import { IoInformationCircleOutline } from 'react-icons/io5'
 import { BsBook, BsChatDots } from 'react-icons/bs'
 import { RiTeamLine } from 'react-icons/ri'
+import "./index.module.css"
 
 const mainCTA = [
   {
@@ -50,24 +39,24 @@ export default function Home() {
     <Layout
       title={siteConfig.title}
       description={siteConfig.tagline}>
-      <Container>
-        <DocsHeader>
-          <DocsHeaderContent>
+      <div className="sp-container">
+        <div className="sp-docs-header">
+          <div className="sp-docs-header-content">
           <h1 style={{ fontWeight: "600" }}>Welcome to Sperax USDs Docs</h1>
-            <SmOnly>
+            <div className="sp-sm-only">
               <SearchBar />{" "}
-            </SmOnly>
-          </DocsHeaderContent>
-          <Row>
+            </div>
+          </div>
+          <div className="sp-row">
           {mainCTA.map((cta) => (
               <Link style={{ textDecoration: "none" }} to={cta.to}>
-                <ShadowCard key={cta.title}>
-                  <TopSection>
-                    <IconWrapper>
+                <div key={cta.title} className="sp-card-shadow">
+                  <div className="sp-top-section">
+                    <div className="sp-icon-wrap">
                       <cta.icon
                         style={{ width: "24px" }}
                       />
-                    </IconWrapper>
+                    </div>
 
                     <svg
                       style={{ width: "24px", opacity: 0.2 }}
@@ -77,48 +66,48 @@ export default function Home() {
                     >
                       <path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
                     </svg>
-                  </TopSection>
+                  </div>
                   <h3 style={{ marginBottom: ".75rem" }}>
                     {cta.title}
                   </h3>
                   <p style={{ marginBottom: "0.5rem" }}>{cta.text}</p>
-                </ShadowCard>
+                </div>
               </Link>
             ))}
-          </Row>
-        </DocsHeader>
-        <Row>
+          </div>
+        </div>
+        <div className="sp-row">
           <Link
             style={{ textDecoration: "none" }}
             href={"https://discord.gg/bYMNBnj"}
           >
-            <CenterCard>
+            <div className="sp-card-center">
               <DiscordLogo style={{ width: "48px", height: "48px" }} />
               <div>
                 <h3>Discord</h3>
                 <p>Connect with us on Discord for realtime support.</p>
               </div>
-            </CenterCard>
+            </div>
           </Link>
           <Link
             style={{ textDecoration: "none" }}
             href={"https://forum.sperax.io/"}
           >
-            <CenterCard>
+            <div className="sp-card-center">
               <BsChatDots style={{ width: "48px", height: "48px" }} />
               <div>
                 <h3>Forum</h3>
                 <p>Dicsuss governance and more.</p>
               </div>
-            </CenterCard>
+            </div>
           </Link>
 
           <Link
             style={{ textDecoration: "none" }}
             href={"https://github.com/Sperax"}
           >
-            <CenterCard>
-              <StyledGithubIcon>
+            <div className="sp-card-center">
+              <div className="sp-github-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 120.78 117.79"
@@ -162,15 +151,15 @@ export default function Home() {
                     </g>
                   </g>
                 </svg>{" "}
-              </StyledGithubIcon>
+              </div>
               <div>
                 <h3>Github</h3>
                 <p>View all Sperax opensource projects.</p>
               </div>
-            </CenterCard>
+            </div>
           </Link>
-        </Row>
-      </Container>
+        </div>
+      </div>
     </Layout>
   );
 }
