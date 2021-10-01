@@ -4,10 +4,10 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import SearchBar from '@theme-original/SearchBar';
 import DiscordLogo from '@site/static/img/discord.svg';
-import { IoInformationCircleOutline } from 'react-icons/io5'
-import { BsBook, BsChatDots } from 'react-icons/bs'
-import { RiTeamLine } from 'react-icons/ri'
-import "./index.module.css"
+import { IoInformationCircleOutline } from 'react-icons/io5';
+import { BsBook, BsChatDots } from 'react-icons/bs';
+import { RiTeamLine } from 'react-icons/ri';
+import styles from "./index.module.css";
 
 const mainCTA = [
   {
@@ -39,20 +39,20 @@ export default function Home() {
     <Layout
       title={siteConfig.title}
       description={siteConfig.tagline}>
-      <div className="sp-container_src-pages-index-module">
-        <div className="sp-docs-header_src-pages-index-module">
-          <div className="sp-docs-header-content_src-pages-index-module">
+      <div className={styles.spContainer}>
+        <div className={styles.spDocsHeader}>
+          <div className={styles.spDocsHeaderContent}>
           <h1 style={{ fontWeight: "600" }}>Welcome to Sperax USDs Docs</h1>
-            <div className="sp-sm-only_src-pages-index-module">
+            <div className={styles.spSmOnly}>
               <SearchBar />{" "}
             </div>
           </div>
-          <div className="sp-row_src-pages-index-module">
+          <div className={styles.spRow}>
           {mainCTA.map((cta) => (
               <Link style={{ textDecoration: "none" }} to={cta.to}>
-                <div key={cta.title} className="sp-card-shadow_src-pages-index-module">
-                  <div className="sp-top-section_src-pages-index-module">
-                    <div className="sp-icon-wrap_src-pages-index-module">
+                <div key={cta.title} className={styles.spCardShadow}>
+                  <div className={styles.spTopSection}>
+                    <div className={styles.spIconWrap}>
                       <cta.icon
                         style={{ width: "24px" }}
                       />
@@ -76,16 +76,16 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="sp-row_src-pages-index-module">
+        <div className={styles.spRow}>
           <Link
             style={{ textDecoration: "none" }}
             href={"https://discord.gg/bYMNBnj"}
           >
-            <div className="sp-card-center_src-pages-index-module">
+            <div className={styles.spCardCenter}>
               <DiscordLogo style={{ width: "48px", height: "48px" }} />
               <div>
                 <h3>Discord</h3>
-                <p>Connect with us on Discord for realtime support.</p>
+                <p>Connect with us on Discord for support.</p>
               </div>
             </div>
           </Link>
@@ -93,7 +93,7 @@ export default function Home() {
             style={{ textDecoration: "none" }}
             href={"https://forum.sperax.io/"}
           >
-            <div className="sp-card-center_src-pages-index-module">
+            <div className={styles.spCardCenter}>
               <BsChatDots style={{ width: "48px", height: "48px" }} />
               <div>
                 <h3>Forum</h3>
@@ -106,8 +106,8 @@ export default function Home() {
             style={{ textDecoration: "none" }}
             href={"https://github.com/Sperax"}
           >
-            <div className="sp-card-center_src-pages-index-module">
-              <div className="sp-github-icon_src-pages-index-module">
+            <div className={styles.spCardCenter}>
+              <div className={styles.spGithubIcon}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 120.78 117.79"

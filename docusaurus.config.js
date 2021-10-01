@@ -1,4 +1,3 @@
-const path = require("path");
 // const lightCodeTheme = require('prism-react-renderer/themes/github');
 // const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -29,11 +28,8 @@ const path = require("path");
           includeCurrentVersion: false,
         },
         theme: {
-          customCss: [
-            path.resolve('src/css/custom.css'),
-            path.resolve('src/css/colors.css'),
-            path.resolve('src/pages/index.modules.css'),
-          ]
+          customCss: require.resolve("./src/css/custom.css"),
+          customCss2: require.resolve("./src/css/colors.css"),
         },
       }),
     ],
@@ -71,10 +67,10 @@ const path = require("path");
             type: "docsVersionDropdown",
             position: "left",
             dropdownActiveClassDisabled: true,
-            // dropdownItemsAfter: [{
-            //   to: '/versions',
-            //   label: 'All versions'
-            // }],
+            dropdownItemsAfter: [{
+              to: '#',
+              label: 'All versions'
+            }],
             docsPluginId: "default",
             className: "persistent",
           },
