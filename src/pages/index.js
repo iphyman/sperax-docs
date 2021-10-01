@@ -11,7 +11,7 @@ import "./index.module.css"
 
 const mainCTA = [
   {
-    title: "What is USDs",
+    title: "What is USDs?",
     href: "https://sperax.io/USDs",
     icon: IoInformationCircleOutline,
     to: "#",
@@ -39,20 +39,20 @@ export default function Home() {
     <Layout
       title={siteConfig.title}
       description={siteConfig.tagline}>
-      <div className="sp-container">
-        <div className="sp-docs-header">
-          <div className="sp-docs-header-content">
+      <div className="sp-container_src-pages-index-module">
+        <div className="sp-docs-header_src-pages-index-module">
+          <div className="sp-docs-header-content_src-pages-index-module">
           <h1 style={{ fontWeight: "600" }}>Welcome to Sperax USDs Docs</h1>
-            <div className="sp-sm-only">
+            <div className="sp-sm-only_src-pages-index-module">
               <SearchBar />{" "}
             </div>
           </div>
-          <div className="sp-row">
+          <div className="sp-row_src-pages-index-module">
           {mainCTA.map((cta) => (
               <Link style={{ textDecoration: "none" }} to={cta.to}>
-                <div key={cta.title} className="sp-card-shadow">
-                  <div className="sp-top-section">
-                    <div className="sp-icon-wrap">
+                <div key={cta.title} className="sp-card-shadow_src-pages-index-module">
+                  <div className="sp-top-section_src-pages-index-module">
+                    <div className="sp-icon-wrap_src-pages-index-module">
                       <cta.icon
                         style={{ width: "24px" }}
                       />
@@ -76,12 +76,12 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="sp-row">
+        <div className="sp-row_src-pages-index-module">
           <Link
             style={{ textDecoration: "none" }}
             href={"https://discord.gg/bYMNBnj"}
           >
-            <div className="sp-card-center">
+            <div className="sp-card-center_src-pages-index-module">
               <DiscordLogo style={{ width: "48px", height: "48px" }} />
               <div>
                 <h3>Discord</h3>
@@ -93,7 +93,7 @@ export default function Home() {
             style={{ textDecoration: "none" }}
             href={"https://forum.sperax.io/"}
           >
-            <div className="sp-card-center">
+            <div className="sp-card-center_src-pages-index-module">
               <BsChatDots style={{ width: "48px", height: "48px" }} />
               <div>
                 <h3>Forum</h3>
@@ -106,8 +106,8 @@ export default function Home() {
             style={{ textDecoration: "none" }}
             href={"https://github.com/Sperax"}
           >
-            <div className="sp-card-center">
-              <div className="sp-github-icon">
+            <div className="sp-card-center_src-pages-index-module">
+              <div className="sp-github-icon_src-pages-index-module">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 120.78 117.79"

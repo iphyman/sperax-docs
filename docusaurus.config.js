@@ -1,3 +1,4 @@
+const path = require("path");
 // const lightCodeTheme = require('prism-react-renderer/themes/github');
 // const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -6,7 +7,7 @@
 (module.exports = {
   title: 'Sperax USD docs',
   tagline: 'Sperax documentation and guides',
-  url: 'https://docs.sperax.io',
+  url: 'https://sperax-docs.netlify.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,9 +29,11 @@
           includeCurrentVersion: false,
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-          customCss2: require.resolve("./src/css/colors.css"),
-          themeCss: require.resolve("./src/pages/index.module.css"),
+          customCss: [
+            path.resolve('src/css/custom.css'),
+            path.resolve('src/css/colors.css'),
+            path.resolve('src/pages/index.modules.css'),
+          ]
         },
       }),
     ],
@@ -50,7 +53,6 @@
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/twitter_card_bg.jpg",
       prism: {
         additionalLanguages: ["solidity"],
       },
